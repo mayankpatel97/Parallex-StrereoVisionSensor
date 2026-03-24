@@ -32,8 +32,8 @@ This project implements a **dual-camera stereo vision pipeline** that computes d
 ## Components
 
 * Raspberry Pi Compute Module 4 (CM4)
-* 2 × CSI Cameras (e.g., Camera Module 3)
-* CM4 IO Board / Custom carrier board
+* 2 × CSI Cameras
+* CM4 IO Board
 * Rigid stereo mount frame
 
 ---
@@ -50,21 +50,10 @@ This project implements a **dual-camera stereo vision pipeline** that computes d
 
 ---
 
-## 📏 Baseline (Distance Between Cameras)
-
-| Use Case     | Recommended Baseline |
-| ------------ | -------------------- |
-| Indoor Robot | 6–8 cm               |
-| Drone        | 8–12 cm              |
-| Long Range   | 15–25 cm             |
-
-👉 Recommended: **8–10 cm**
-
----
 
 ## ⚠️ Mounting Guidelines
 
-* Cameras must be **perfectly parallel**
+* Cameras must be **perfectly parallel** at a distance of **10 cm**
 * Same height and orientation
 * Use **rigid frame (no vibration)**
 
@@ -144,20 +133,13 @@ Where:
 
 ---
 
-### Recommended Algorithm
+### Algorithm
 
-| Algorithm  | Speed  | Quality |
-| ---------- | ------ | ------- |
-| StereoBM   | Fast   | Low     |
-| StereoSGBM | Medium | Good ✅  |
-
-👉 Use: **StereoSGBM**
+ **StereoSGBM**
 
 ---
 
 # 🚧 Obstacle Detection
-
-Basic logic:
 
 ```cpp
 if (depth < threshold_distance)
@@ -168,7 +150,7 @@ if (depth < threshold_distance)
 
 ---
 
-## Zone-based Detection (Recommended)
+## Zone-based Detection
 
 Divide image into:
 
@@ -237,7 +219,7 @@ Detect closest obstacle per zone.
 
 ---
 
-# 📂 Suggested Project Structure
+# 📂 Project Structure
 
 ```
 stereo-vision/
