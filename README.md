@@ -61,10 +61,22 @@ This project implements a **dual-camera stereo vision pipeline** that computes d
 
 # ⚙️ Software Stack
 
-* OS: Linux (Raspberry Pi OS / Yocto)
-* Camera Interface: `libcamera`
-* Processing: `OpenCV (C++)`
-* Optional: MAVLink for drone integration
+### Install dependencies
+```
+sudo apt update
+sudo apt install -y libopencv-dev cmake g++
+
+sudo apt install -y libcamera-dev
+```
+
+### Build and Run
+```
+mkdir build && cd build
+cmake ..
+make -j4
+./stereo
+```
+
 
 ---
 
