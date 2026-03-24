@@ -256,14 +256,9 @@ stereo-vision/
 
 ---
 
-# 🏁 Conclusion
+# Expected output
+Original image and Disparity Map (right)
 
-This system provides a **low-cost, scalable stereo vision solution** suitable for drones and robotics. Starting with CM4 allows rapid prototyping, with clear upgrade paths to more powerful platforms.
-
----
-
-# 👨‍💻 Author
-
-Built for embedded systems, robotics, and drone applications.
+![alt text](docs/disparity_map.png)
 
 ---
